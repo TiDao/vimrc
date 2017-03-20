@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/magatron/auto_install/auto_install'
+let g:netrw_dirhist_2='/home/magatron/auto_install'
+let g:netrw_dirhist_3='/home/magatron'
+let g:netrw_dirhist_4='/home/magatron/auto_install'
+let g:netrw_dirhist_5='/home/magatron/auto_install/auto_install'
