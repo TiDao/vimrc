@@ -1,8 +1,8 @@
 filetype on
 set rtp+=~/.vim/bundle/Vundle.vim
 
-autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
-"autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+""autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+"""autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
 
 ""rust config
 set nocompatible
@@ -101,7 +101,7 @@ call vundle#end()
 """""新文件标题
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "新建.c,.h,.sh,.java.py,pl文件，自动插入文件头 
-autocmd BufNewFile *.go,*.cpp,*.[ch],*.sh,*.java,*.py,*.pl exec ":call SetTitle_1()" 
+autocmd BufNewFile *.rs,*.go,*.cpp,*.[ch],*.sh,*.java,*.py,*.pl exec ":call SetTitle_1()" 
 ""定义函数SetTitle，自动插入文件头 
 func SetTitle_1() 
     "如果文件类型为.sh文件 
@@ -115,6 +115,7 @@ func SetTitle_1()
         call append(line(".")+5, "\#!/bin/bash") 
         call append(line(".")+6, "") 
 	endif
+
     if &filetype == 'python' 
         call setline(1,"\#########################################################################") 
         call append(line("."), "\# File Name: ".expand("%")) 
