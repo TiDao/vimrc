@@ -88,6 +88,8 @@ Plugin 'indentLine.vim'
 
 "vim {} [] "" '' 自动补全插件
 Plugin 'delimitMate.vim'
+
+"对rust文件类型单引号不自动补全
 au FileType rust let b:delimitMate_quotes="\""
 au FileType rust let b:delimitMate_matchpairs = "(:),[:],{:}"
 
